@@ -64,35 +64,9 @@
     </header>
 
     <main role="main">
-
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">{{ title }}</h1>
-                <p class="lead text-muted">Hi, I love making Django websites. They are the best.</p>
-                <p>
-                    <a href="#" class="btn btn-primary my-2">Main call to action</a>
-                    <a href="#" class="btn btn-secondary my-2">Secondary action</a>
-                </p>
-            </div>
-        </section>
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-                <div class="row">
-
-                    {% for job in jobs.all %}
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-image-top" src="{{ job.image.url }}" />
-                            <div class="card-body">
-                                <p class="card-text"> {{ job.summary }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-
-                </div>
-            </div>
+        <div class="container">
+            <h1 class="text-center pt-3 pb-5">Welcome to the Doggie Blog</h1>
+            <h2>Latest Posts:</h2>
         </div>
     </main>
 
