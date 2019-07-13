@@ -65,8 +65,26 @@
 
     <main role="main">
         <div class="container">
-            <h1 class="text-center pt-3 pb-5">Welcome to the Doggie Blog</h1>
+            <h1 class="text-center pt-3 pb-5">Welcome to the {{ title }}</h1>
             <h2>Latest Posts:</h2>
+            <hr>
+
+            <div class="blogs pt-3">
+                {% for blog in blogs.all %}
+                <div class="pb-3">
+                    <img src="{{ blog.image.url }}" 
+                        alt="blog image">
+                    <h3>{{ blog.title }}</h3>
+                    <div>
+                        <p>{{ blog.body }}</p>
+                    </div>
+                    <div>
+                        {{ blog.date }}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
         </div>
     </main>
 

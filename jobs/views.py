@@ -3,6 +3,5 @@ from .models import Job
 
 def home(request):
     jobs = Job.objects
-    return render(request, 'jobs/home.html', 
-                 {'title' : 'Doggie Album',
-                  'jobs' : jobs})
+    return render(request, 'jobs/home.html',  {'title' : 'Doggie Album',
+       'jobs' : jobs})
