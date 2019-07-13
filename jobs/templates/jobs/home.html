@@ -69,7 +69,8 @@
         {% for job in jobs.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-
+            <img class="card-image-top" 
+                 src="{{ job.image.url }}"/>
             <div class="card-body">
               <p class="card-text"> {{ job.summary }}</p>
             </div>
