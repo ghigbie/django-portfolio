@@ -72,7 +72,7 @@
             <div class="blogs pt-3">
                 {% for blog in blogs.all %}
                 <div class="pb-3">
-                    <a href="/blog/{{ blog.id}}">
+                    <a href="{% url 'detail' blog.id%}">
                         <img src="{{ blog.image.url }}" 
                              class="image-fluid"
                              alt="blog image">
