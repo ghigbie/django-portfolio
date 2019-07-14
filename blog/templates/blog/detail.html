@@ -70,15 +70,8 @@
             <hr>
 
             <div class="single-blog pt-3">
-                <div class="pb-3">
-                    <a href="/blog{{ blog.id }}">
-                        <img src="{{ blog.image.url }}" alt="blog image">
-                    </a>
-                    <h3>
-                        <a href="/blog/{{ blog.id }}">
-                            {{ blog.title }}
-                        </a>
-                    </h3>
+                    <img src="{{ blog.image.url }}" alt="blog image">
+                    <h3>{{ blog.title}}</h3>
                     <div>
                         <p>{{ blog.body }}</p>
                     </div>
