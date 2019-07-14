@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>{{ title }}</title>
+    <title>Album example · Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
 
@@ -72,18 +72,17 @@
             <div class="blogs pt-3">
                 {% for blog in blogs.all %}
                 <div class="pb-3">
-                    <img src="{{ blog.image.url }}" 
-                        alt="blog image">
-                    <h3>
-                        <a href="/blog/{{ blog.id }}">
-                            {{ blog.title }}
-                        </a>
-                    </h3>
+                    <a href="/blog/{{ blog.id}}">
+                        <img src="{{ blog.image.url }}" 
+                             class="image-fluid"
+                             alt="blog image">
+                        <h3>{{ blog.title }}</h3>
+                    </a>
                     <div>
-                        <p>{{ blog.body }}</p>
+                        <p>{{ blog.short_summary }}</p>
                     </div>
                     <div>
-                        {{ blog.date }}
+                        {{ blog.pub_date_pretty }}
                     </div>
                 </div>
                 {% endfor %}
