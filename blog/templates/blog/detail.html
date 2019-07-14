@@ -70,19 +70,18 @@
             <hr>
 
             <div class="blogs pt-3">
-                {% for blog in blogs.all %}
                 <div class="pb-3">
                     <img src="{{ blog.image.url }}" 
-                        alt="blog image">
+                         class="image-fluid"
+                         alt="blog image">
                     <h3>{{ blog.title }}</h3>
                     <div>
                         <p>{{ blog.body }}</p>
                     </div>
                     <div>
-                        {{ blog.date }}
+                        {{ blog.pub_date }}
                     </div>
                 </div>
-                {% endfor %}
             </div>
 
         </div>
